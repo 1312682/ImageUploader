@@ -1,31 +1,19 @@
 <% title 'Login | ImageUploader' %>
-<div class="top-content">
-  <div class="inner-bg">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-6 col-sm-offset-3 form-box">
-          <div class="form-top">
-            <div class="description center">
-              <h1 class="mg-t-sm">Sign In</h1>
-            </div>
-          </div>
-          <div class="form-bottom">
-            <%=	form_for :session, :html => {:class => 'login-form'}, url: login_path do |f| %>
-                <div class="form-group">
-                  <%=	f.label 'Username', :class => 'sr-only' %>
-                  <%=	f.text_field :username, :class => 'form-username form-control', placeholder: 'Username' %>
-                </div>
-                <div class="form-group">
-                  <%=	f.label 'Password', :class => 'sr-only' %>
-                  <%=	f.password_field :password, :class => 'form-username form-control', placeholder: 'Password' %>
-                </div>
-                <div class="center">
-                  <%=	f.submit 'Sign In', :class => 'btn btn-lg' %>
-                </div>
-            <% end %>
-          </div>
-        </div>
-      </div>
-    </div>
+<h1>Log in</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for :session, url: login_path do |f| %>
+
+        <%= f.label :email %>
+        <%= f.email_field :email, class: 'form-control' %>
+
+        <%= f.label :password %>
+        <%= f.password_field :password, class: 'form-control' %>
+
+        <%= f.submit "Log in", class: "btn btn-primary" %>
+    <% end %>
+
+    <p>New user? <%= link_to "Sign up now!", register_path %></p>
   </div>
 </div>
