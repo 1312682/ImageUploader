@@ -1,16 +1,12 @@
-<nav class="navbar navbar-fixed-top">
+<header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#onepage-nav"><i class="fa fa-bars"></i></button>
-      <div class="logo-wrapper-index">
-        <h2 class="mg-t-sm">ImagesUpload</h2>
-      </div>
-    </div>
-    <div class="collapse navbar-collapse" id="onepage-nav">
+    <%= link_to 'Image Uploader', '#', id: "logo" %>
+    <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to 'Sign Up', register_path %></li>
-        <li><%=	link_to 'Sign In', login_path %></li>
+        <li><%= link_to 'Home',   '#' %></li>
+        <li><%= link_to 'Register', register_path %></li>
+        <li><%= link_to 'Log in', login_path %></li>
       </ul>
-    </div>
+    </nav>
   </div>
-</nav>
+</header>
