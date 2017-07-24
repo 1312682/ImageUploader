@@ -11,3 +11,26 @@
                 data: { confirm: 'Are you sure?' } %>
   <% end %>
 </span>
+<div class="comments">
+  <ol>
+    <% micropost.comments.each_with_index do |comment, index| %>
+      <li class="<%= index.even? ? 'dark' : 'light' %>">
+        <%= link_to gravatar_for(comment.user, size: 30), comment.user %>
+        <span class="user-comment"><%= link_to comment.user.username, comment.user %></span>
+        <span class="comment-content"><%= comment.body %></span>
+      </li>
+    <% end %>
+  </ol>
+</div>
+
+<% if logged_in? %>
+  <%= form_for([micropost, micropost.comments.build]) do |f| %>
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+    <div class="col-md-9" style="padding: 0">
+      <%= f.text_field :body, :class => 'form-control input-sm', placeholder: 'Write comment here...' %>
+    </div>
+    <div class="col-md-3" style="padding-right: 0">
+      <%= f.submit 'Post', :class => 'btn btn-primary btn-sm' %>
+    </div>
+  <% end %>
+<% end %>

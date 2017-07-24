@@ -1,5 +1,5 @@
 module MicropostsHelper
   def get_all_micropost
-    Micropost.all
+    Micropost.includes(:user, comments: :user).all
   end
 end

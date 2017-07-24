@@ -230,6 +230,9 @@ input {
   li {
     padding: 10px 0;
     border-top: 1px solid #e8e8e8;
+    &:not(:first-child) {
+      margin-top: 30px;
+    }
   }
   .user {
     margin-top: 5em;
@@ -252,6 +255,12 @@ input {
     float: left;
     margin-right: 10px;
     margin-top: 5px;
+  }
+  .comments {
+    li {
+      margin-top: 0;
+      padding: 0;
+    }
   }
 }
 
@@ -284,5 +293,31 @@ span.picture {
   margin-top: 10px;
   input {
     border: 0;
+  }
+}
+
+/* Comment */
+.comments {
+  ol {
+    padding-left: 0;
+    list-style: none;
+    img {
+      margin-top: 5px;
+    }
+    .dark {
+      background-color: lightgrey;
+    }
+    .light {
+      background-color: white;
+    }
+  }
+  .user-comment {
+    margin-top: 5em;
+    padding-top: 0;
+    color: blue;
+  }
+  .comment-content {
+    display: block;
+    margin-left: 10px;
   }
 }
