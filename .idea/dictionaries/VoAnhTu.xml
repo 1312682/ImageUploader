@@ -4,12 +4,15 @@
       <w>bcrypt</w>
       <w>byebug</w>
       <w>capybara</w>
+      <w>carrierwave</w>
       <w>dropdown</w>
       <w>emoji</w>
       <w>evented</w>
+      <w>github</w>
       <w>gravatar</w>
       <w>jbuilder</w>
       <w>navbar</w>
+      <w>pictrue</w>
       <w>runtimes</w>
       <w>signin</w>
       <w>therubyracer</w>

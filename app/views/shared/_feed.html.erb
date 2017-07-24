@@ -1,0 +1,8 @@
+<% if @feed_items.any? %>
+    <% @feed_items.each do |item| %>
+      <div class="col-md-4 micro-item">
+        <%=	render item %>
+      </div>
+    <% end %>
+    <%= will_paginate @feed_items %>
+<% end %>

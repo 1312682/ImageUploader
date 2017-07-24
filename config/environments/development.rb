@@ -52,7 +52,11 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   # config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
+  # Support sass
   config.sass.preferred_syntax = :scss
   config.sass.line_comments = false
   config.sass.cache = false
+
+  # Config paperclip on window
+  Paperclip.options[:command_path] = 'C:\Program Files (x86)\GnuWin32\bin'
 end

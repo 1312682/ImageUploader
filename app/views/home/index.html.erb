@@ -1,8 +1,18 @@
 <% title 'Home | ImageUploader' %>
+<% if !logged_in? %>
 <div class="center jumbotron">
   <h1>Welcome to the Image Uploader</h1>
 
   <h2>This is the home page for the <strong>Image Uploader</strong> sample application.</h2>
 
   <%= link_to "Sign up now!", register_path , class: "btn btn-lg btn-primary" %>
+</div>
+<% end %>
+
+<div class="center jumbotron">
+  <h1>Image Feed</h1>
+</div>
+
+<div class="row">
+  <%= render 'shared/feed' %>
 </div>
